@@ -7,7 +7,7 @@ import Data.List
 
 -- 1.a
 
-null' x = x
+null' [] = True
 
 --pembatas
 
@@ -23,7 +23,7 @@ fst' (a,b,c,d,e) = a
 
 --pembatas
 
-snd' x = x
+snd' (a,b) = b
 
 --pembatas
 
@@ -79,7 +79,7 @@ notElem' x = x
 
 --pembatas
 
-head' x = x
+head' (x:xs) = x
 
 --pembatas
 
@@ -91,11 +91,11 @@ reverse' x = x
 
 --pembatas
 
-last' x = x
+last' (x:xs) = xs
 
 --pembatas
 
-tail' x = x
+tail' (x:xs) = x
 
 --pembatas
 
