@@ -13,11 +13,16 @@ null' a
 
 --pembatas
 
-take' x = x
+take' _ [] = []
+  take' 0 (x:xs) = []
+  take' a (x:xs) = x : take' (a-1) xs
 
 --pembatas
 
-drop' x = x
+drop' _ [] = []
+  drop' 0 (x:xs) = (x:xs)
+  drop' a (x:xs) = drop' (n-1) xs
+
 
 --pembatas
 
@@ -106,11 +111,15 @@ init' x = x
 
 --pembatas
 
-max' x = x
+  max' x y
+    | x >= y = x
+    | y >= x = y
 
 --pembatas
 
-min' x = x
+  min' x y
+    | x <= y = x
+    | y <= x = y
 
 --pembatas
 
